@@ -1,0 +1,446 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar{
+  background-color: #1c1c1c !important;
+
+}
+.container-section-products{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.products-title{
+  font: normal normal bold 24px/29px SF Pro Display;  padding-top: 52px;
+  padding-bottom: 36px;
+}
+.container-product{
+  width: fit-content;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-items: center ;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  max-width: 1280px;
+}
+.products {
+  height: 419px;
+}
+.products:not(:last-child){
+  border-right: 1px solid #DDDDDD;
+}
+.products img {
+  width: 220px;
+  height: 220px;
+  margin-top: 24px;
+    margin-left: 47px;
+    margin-right: 52px;
+}
+.products_name{
+  text-align: left;
+font: normal normal normal 16px/19px SF Pro Display;
+color: #000000;
+margin-left: 25px;
+margin-top: 33px;
+}
+.products_price {
+  text-align: left;
+font: normal normal medium 20px/24px SF Pro Display;
+color: #000000;
+margin-left: 25px;
+margin-top: 39px;
+}
+.products_old-price {
+  text-align: left;
+text-decoration: line-through;
+font: normal normal medium 20px/24px SF Pro Display;
+color: #A7A9AC;
+margin-right: 24px;
+
+}
+.products_Instock{
+  
+  text-align: left;
+font: normal normal 300 14px/16px SF Pro Display;
+color: #36BA5C;
+  margin-left: 25px;
+  margin-top: 5px;
+
+}
+.products_outstock{
+color: #D63030;
+}
+.container-section-products ul{
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  list-style: none;
+  margin-top: 30px;
+}
+.container-section-products ul li {
+  margin: 0 10px;
+}
+.container-section-products a{
+  text-decoration: none;
+}
+
+.page-link{
+border: 4px solid #c2c1c1;
+padding: 0;
+border-radius: 50%;
+font-size: 0;
+}
+.active-link {
+  border: 4px solid #696a6a ;
+  
+}
+.prevButton {
+  background-image: url(./assets/leftarrow.png);
+  background-size: cover;
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.prevButton:hover ,
+.nextButton:hover
+{
+  border: 1px solid #c2c1c1;
+  border-radius: 50%;
+}
+.nextButton{
+  background-image: url(./assets/rightarrow.png); 
+  font-size: 0;
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  display: block;
+}
+ .subscribe{
+  background-color: #F0F0F0;
+  height: 352px;
+  text-align: center;
+  padding-top: 115px;
+} 
+.subscribe-header{
+  text-align: center;
+font: normal normal 300 30px/36px SF Pro Display;
+color: #000000;
+
+}
+.subscribe .form-inline {
+  margin-top: 36px;
+
+}
+.subscribe .form-control {
+  display: inline-block;
+  background-color: transparent;
+  width: 440px;
+  height: 50px;
+  margin-right:-20px;
+  border-radius: 10px;
+  
+
+} 
+.subscribe .form-control::placeholder {
+  font: normal normal 300 16px/19px SF Pro Display;
+color: #000000;
+}
+.subscribe_button{
+  width: 193px;
+  height: 50px;
+  background-color: #000000 ;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+.footer {
+  background-color: #1C1C1C;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  position:relative;
+  bottom: 0;
+}
+.footer .img_footer{
+  width: 885px;
+height: 77px;
+display: flex;
+justify-content: space-between;
+margin-top: 49px;
+padding-bottom: 28px;
+}
+.footer .footer_copyright{
+  position: absolute;
+text-align: center;
+font: normal normal normal 12px/14px SF Pro Display;
+color: #FFFFFF;
+  bottom: 20px;
+ }
+
+ .product_card{
+  cursor: pointer;
+  max-width: 114px;
+  width: 100%;
+  height: 82px;
+  text-align: center;
+font: normal normal 600 16px/19px SF Pro Display;
+color: #C3C3C3;
+  border: 1px solid #C3C3C3;
+  border-radius: 10px;
+  margin: 7px 7px 7px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_card img {
+  width: 100%;
+}
+.product_card-selected{
+  border: 1px solid black;
+  color: black;
+}
+.silver {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: silver;
+}
+.blue {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(146, 120, 250);
+}
+.product_details .title {
+  text-align: left;
+font: normal normal medium 15px/18px SF Pro Display;
+letter-spacing: 0px;
+color: #888888;
+}
+.product_details .product_name {
+  text-align: left;
+font: normal normal medium 18px/21px SF Pro Display;
+letter-spacing: 0px;
+color: #000000;
+}
+.product_details .product-review {
+  text-align: left;
+font: normal normal normal 13px/15px SF Pro Display;
+letter-spacing: 0px;
+color: #AAAAAA;
+margin-left: 7px;
+}
+.product_details .product_price {
+  text-align: left;
+font: normal normal bold 31px/37px SF Pro Display;
+color: #0D4EB7;
+}
+.product_details .priceless {
+color: #000000;
+}
+.product_details .item_count_container{
+  height: 34px;
+  margin-top: 25px;
+  margin-bottom: 14px;
+}
+.product_details .add_item,
+.product_details .remove_item {
+  width: 35px;
+height: 34px;
+border: 1px solid #000000;
+border-radius: 50%;
+background-color: white;
+font-size: 22px;
+}
+.product_details .add_item{
+  margin-right: 17px;
+}
+.product_details .remove_item{
+  margin-left: 17px;
+}
+.product_details .item_count {
+  text-align: left;
+font: normal normal normal 26px/31px SF Pro Display;
+letter-spacing: 0px;
+color: #000000;
+}
+.button_add_to_cart {
+  width: 475px;
+  width: 100%;
+height: 50px;
+background: #0D4EB7 0% 0% no-repeat padding-box;
+border-radius: 10px;
+text-align: center;
+font: normal normal medium 11px/13px SF Pro Display;
+color: #FFFFFF;
+border: none;
+margin-top: 34px;
+}
+.cartout {
+  background: #000000;
+}
+.product_shipping {
+font: normal normal normal 13px/15px SF Pro Display;
+letter-spacing: 0px;
+color: #6F6F6F;
+margin-top: 25px;
+}
+@media (min-width:992px) {
+  .nav-link {
+      color: white !important;
+      padding: 0 15px !important;
+      font-size: 15px;
+      font-weight: 400;
+  }
+  
+  
+}
+@media screen and (max-width:1400px) {
+  .products img {
+    width: 116px;
+    height: 116px;
+  }
+  .products {
+    height: 240px;
+  }
+  
+}
+@media (max-width:991.5px) {
+  .nav-link:nth-child(8){
+      display:none;
+  }
+  .nav-link img{
+  margin: 0 7px;
+  }
+
+  .container-product {
+    grid-template-columns: auto auto;
+}
+.products:nth-child(2){
+  border: none;
+}
+.products:nth-child(3),
+.products:nth-child(4){
+  border-top:1px solid #DDDDDD ;
+}
+  
+  .products_name{
+    font-size:  8px;
+    margin-left: 13px;
+    margin-top: 17px;
+  }
+.products_price{
+  font-size:  10px ;
+  margin-top: 20px;
+  margin-left: 13px;
+  }
+.products_Instock{
+  font:  10px;
+  margin-top: 3px;
+  margin-left: 13px;
+}
+  
+.subscribe{
+  height: 152px;
+  padding-top: 52px;
+}
+.subscribe-header{
+  font-size: 14px;
+}
+.subscribe .form-inline {
+  margin-top: 18px;
+
+}
+.subscribe .form-control{
+  height: 24px;
+  width: 201px;
+  border-radius: 4px;
+  font-size: 4px;
+}
+.subscribe .form-control::placeholder{
+  font-size: 4px;
+}
+.subscribe_button{
+  height: 24px;
+  width: 93px;
+  border-radius: 4px;
+  font-size: 4px;
+}
+}
+/* .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+  width: 1200px;
+  height: 88px;
+} */
+.navbar__logo{
+  width: 24px;
+  height: 24px;
+}
+
+.carousel img{
+  height: 36vw;
+  width: 100%;
+  object-fit: cover !important;
+}
+.carousel-control-next-icon{
+   background-image: url(./assets/SVG/nextArrow.svg); 
+}
+.carousel-control-prev-icon{
+  background-image: url(./assets/SVG/backArrow.svg); 
+}
+.carousel-indicators [data-bs-target] {
+  width: 7px;
+  height: 7px;
+  margin: auto 8px;
+  background-color: #A7A9AC;
+  border: 1px solid #A7A9AC;
+  border-radius: 50%;
+}
+.carousel-indicators{
+  height: 24px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px #00000029;
+
+}
+@media (max-width:450px) {
+   
+  .carousel img{
+      height: 220px;
+      display: flex;
+  }
+  .carousel-indicators{
+      height: 10px;
+  }
+  .carousel-indicators [data-bs-target] {
+      margin: auto 4px;
+      width: 4px;
+      height: 4px;
+      background-color: #A7A9AC;
+      border: 1px solid #A7A9AC;
+      border-radius: 50%;
+  }
+}
