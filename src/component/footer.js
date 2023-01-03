@@ -1,24 +1,19 @@
+import footer0 from "../assets/footer0.png"
 import footer1 from "../assets/footer1.png";
 import footer2 from "../assets/footer2.png";
 import footer3 from "../assets/footer3.png";
-import footer4 from "../assets/footer4.png";
 
 const Footer = () => {
+  const footer = [footer0,footer1,footer2,footer3]
   return (
     <div className="container-fluid footer">
         <div className="img_footer">
-      <div>
-        <img src={footer1} />
+          {
+          footer.map((footer,index) => (
+            <div key={index}>
+        <img src={footer} />
       </div>
-      <div>
-        <img src={footer2} />
-      </div>
-      <div>
-        <img src={footer3} />
-      </div>
-      <div>
-        <img src={footer4} />
-      </div>
+        ))}
       </div>
        <div className="footer_copyright">Copyright © 2022 - All rights reserved</div>
     </div>

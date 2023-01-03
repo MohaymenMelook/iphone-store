@@ -32,11 +32,12 @@ const Products = () => {
             thumbnail: products.img[i]})
       }
     return ( 
-     
+      <div>
+     {products.length != 0 ?(
         <div className="container mt-5">
         <Row>
      <Col md={7} sm={12}>
-    <ProductGallery productImage={images}/> 
+    <ProductGallery images={images}/> 
     </Col>
     <Col md={5} sm={12}>
     <ProductDetails  products={products}/>
@@ -46,6 +47,11 @@ const Products = () => {
 <PaginatedItems />
     </Row>
 
+    </div>) : (
+      <div className="d-flex justify-content-center align-items-center h-200 " style = {{height : "61vh"}}>
+        <Spinner animation="border" role="status" />
+      </div>
+    ) }
     </div>
     
     );

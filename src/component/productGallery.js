@@ -1,8 +1,6 @@
 import ImageGallery from 'react-image-gallery';
 
-const ProductGallery = ({productImage}) => {
-    const images =productImage;
-      
+const ProductGallery = ({images}) => {
     return ( 
         <div className='container images-gallery mt-5 '>
             {images &&

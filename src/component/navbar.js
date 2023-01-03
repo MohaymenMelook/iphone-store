@@ -6,33 +6,29 @@ import SearchLogo from "../assets/SVG/search.svg";
 import loginLogo from "../assets/SVG/profile.svg";
 import BagLogo from "../assets/SVG/bag.svg";
 import AppleLogo from "../assets/SVG/apple.svg";
+import { Link } from "react-router-dom";
 
 function NavBar() {
+  const links = ["mac","ipad","iphone","watch","tv","Accessories","Offers","|","Support","Services","location"]
   return (
     <Navbar bg="black" expand="lg" variant="dark" collapseOnSelect>
       <Container >
-        <Navbar.Brand href="/">
-         <img
+        <Navbar.Brand>
+          <Link  to = "/">
+          <img
             src={AppleLogo}
             alt="React Logo"
             className="navbar__apple-logo"
           />
-         
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarToggle" />
         <Navbar.Collapse id="navbarToggle" > 
           <Nav className="justify-content-center flex-grow-1">
-            <Nav.Link href="#">Mac</Nav.Link>
-            <Nav.Link href="#">iPad</Nav.Link>
-            <Nav.Link href="#">iPhone</Nav.Link>
-            <Nav.Link href="#">Watch</Nav.Link>
-            <Nav.Link href="#">TV</Nav.Link>
-            <Nav.Link href="#">Accessories</Nav.Link>
-            <Nav.Link href="#">Offers</Nav.Link>
-            <Nav.Link href="#">|</Nav.Link>
-            <Nav.Link href="#">Support</Nav.Link>
-            <Nav.Link href="#">Services</Nav.Link>
-            <Nav.Link href="#">Locations</Nav.Link>
+         { links.map((link,index) => (
+      
+      <Nav.Link href="#" key={index}>{link}</Nav.Link>
+     ))}
           </Nav>
           <Form className="d-flex align-items-center">
             <Nav.Link href="#Search">

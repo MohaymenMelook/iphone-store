@@ -322,7 +322,7 @@ margin-top: 25px;
     height: 116px;
   }
   .products {
-    height: 240px;
+    height: 300px;
   }
   
 }
@@ -339,6 +339,9 @@ margin-top: 25px;
 }
 .products:nth-child(2){
   border: none;
+}
+.products {
+  height: 250px;
 }
 .products:nth-child(3),
 .products:nth-child(4){
@@ -442,5 +445,9 @@ margin-top: 25px;
       background-color: #A7A9AC;
       border: 1px solid #A7A9AC;
       border-radius: 50%;
+  }
+  .products img {
+    width: 90px;
+    height: 90px;
   }
 }

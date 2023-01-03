@@ -37,7 +37,7 @@ function PaginatedItems() {
             {currentItems &&
               currentItems.map((item) => (
                 <div className="products" key={item.id}>
-                  <Link to={`/${item.id}`}>
+                  <Link to={`/product/${item.id}`}>
                     <img src={item.img[0]} alt="First slide" />
                     <div className="products_name">{item.name}</div>
                     <div className="products_price d-flex justify-content-between">
